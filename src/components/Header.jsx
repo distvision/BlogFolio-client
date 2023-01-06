@@ -21,12 +21,12 @@ const links = [
 
 function Header() {
   return (
-    <header className='max-w-[80%] m-auto'>
+    <header className='max-w-[80%] m-auto md:max-w-[650px]'>
       <div className='pb-5 pt-4 flex flex-col'>
-        <img className='rounded-full border-2 border-zinc-400 w-1/4 m-auto' src="https://avatars.githubusercontent.com/u/68926804?v=4" alt="avatar" />
+        <img className='rounded-full border-2 border-zinc-400 w-[120px] m-auto' src="https://avatars.githubusercontent.com/u/68926804?v=4" alt="avatar" />
 
-        <nav>
-          <ul className='flex justify-between content-center mt-5'>
+        <nav className='md:m-auto'>
+          <ul className='flex justify-between content-center mt-5 md:w-[450px]'>
             {
               links.map((link) => (
                 <li

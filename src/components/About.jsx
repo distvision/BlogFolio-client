@@ -2,10 +2,10 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section className='max-w-[80%] m-auto'>
+    <section className='max-w-[80%] m-auto md:max-w-[650px]'>
       <div className='py-5'>
         <h1 className='text-2xl font-bold mb-2 text-zinc-300'>Olá, I'm distvision</h1>
-        <p className='text-base font-medium text-zinc-400'>I am a 23-year-old developer who like to spend time in front of a computer pretending to do something interesting. <br /> Passionate about building <i>senas nices (cool stuff)</i></p>
+        <p className='text-base font-medium text-zinc-400'>I am a 23-year-old developer who like to spend time <br className='hidden md:block' /> in front of a  computer pretending to do something interesting. <br /> <br /> Passionate about building <i>senas nices (cool stuff)</i></p>
       </div>
       <div><hr className=' border-zinc-600 w-full m-auto' /></div>
       <div className='py-5'>

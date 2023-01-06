@@ -5,7 +5,15 @@ module.exports = {
     "./src/**/*.jsx",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: ['system-ui', 'sans-serif'],
+    },
+  extend: {},
+},
+  corePlugins: {
+    aspectRatio: false,
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }
