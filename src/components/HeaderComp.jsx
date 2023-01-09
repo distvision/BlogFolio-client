@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom';
 
 const links = [
   {
@@ -11,7 +12,7 @@ const links = [
   },
   {
     label: 'GitHub',
-    url: 'https://github.com/distvision',
+    url: '/github',
   },
   {
     label: 'Contacts',
@@ -19,7 +20,7 @@ const links = [
   },
 ];
 
-function Header() {
+function HeaderComp() {
   return (
     <header className='max-w-[80%] m-auto md:max-w-[650px]'>
       <div className='pb-5 pt-4 flex flex-col'>
@@ -33,7 +34,10 @@ function Header() {
                   className='rounded-lg border border-zinc-600 bg-neutral-900 p-4 hover:bg-[#111111] transition-all px-3 py-[2px]'
                   key={link.label}
                 >
-                  <a className='text-base font-semibold text-zinc-400' href={link.url}>{link.label}</a>
+                  {/* <a className='text-base font-semibold text-zinc-400' href={link.url}>{link.label}</a> */}
+                  <Link to={link.url} className='text-base font-semibold text-zinc-400'>
+                    {link.label}
+                  </Link>
                 </li>
               ))
             }
@@ -45,4 +49,4 @@ function Header() {
   )
 }
 
-export default Header
+export default HeaderComp
