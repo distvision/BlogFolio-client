@@ -1,12 +1,14 @@
 import React from 'react'
 import About from '../components/About'
 import HeaderComp from '../components/HeaderComp'
+import Post from './Post'
 
 function Home() {
   return (
     <>
-      <HeaderComp />
-      <About />
+      <Post />
+      {/* <HeaderComp />
+      <About /> */}
     </>
   )
 }
