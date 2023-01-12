@@ -1,13 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BlogPosts from '../components/BlogPosts'
 import HeaderComp from '../components/HeaderComp'
 
+import Loading from '../components/Loading';
+
 function Blog() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  function handleLoadingStateChange(isLoading) {
+    setIsLoading(isLoading)
+  }
+
   return (
-    <div>
-      <HeaderComp />
-      <BlogPosts />
-    </div>
+    <>
+      {
+        isLoading && <Loading />
+      }
+      <section className={`${isLoading ? "hidden" : "block"}`}>
+        <div>
+          <HeaderComp />
+          <BlogPosts onLoadingStateChange={handleLoadingStateChange} />
+        </div>
+      </section>
+    </>
   )
 }
 

@@ -1,15 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { client } from '../client';
+import { format } from "date-fns";
 
-function Posts() {
+
+function Posts({ onLoadingStateChange }) {
+  const [posts, setPosts] = useState([])
+
+  useEffect(() => {
+    const query = '*[_type == "post"]';
+
+    onLoadingStateChange(true)
+    client.fetch(query)
+      .then((data) => {
+        setPosts(data)
+        onLoadingStateChange(false)
+      })
+  }, [])
+
+
   return (
     <>
       <div className='rounded-lg border border-zinc-600 bg-neutral-900
-          p-4 hover:bg-[#111111] transition-all mb-5'>
-        <a href="#">
-          <h1 className='text-2xl font-bold mb-2 text-zinc-400'>BlogFolio</h1>
-          <p className='text-base font-medium text-zinc-400'>My personal blog and portfolio</p>
-          <p className='text-zinc-400 mt-2'>28 Set, 1999</p>
-        </a>
+          p-4 hover:bg-neutral-800 transition-all mb-5'>
+        {posts.map((post, index) => (
+          <a key={post.title + index} href="#">
+            <h1 className='text-2xl font-bold mb-2 text-zinc-400'>{post.title}</h1>
+            <p className='text-base font-medium text-zinc-400'>{post.subtitle}</p>
+            <p className='text-zinc-400 mt-2'>{
+              format(new Date(post.publishedAt), "YYY' • 'd' de 'MMMM' • 'k'h'mm")
+            }</p>
+          </a>
+        ))
+        }
       </div>
     </>
   )
