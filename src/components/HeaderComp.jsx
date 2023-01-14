@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import profilePic from '../assets/ozen.jpg'
 
 const links = [
   {
@@ -24,7 +25,7 @@ function HeaderComp() {
   return (
     <header className='max-w-[80%] m-auto md:max-w-[650px]'>
       <div className='pb-5 pt-4 flex flex-col'>
-        <img className='rounded-full border-2 border-zinc-400 w-[80px] m-auto' src="https://avatars.githubusercontent.com/u/68926804?v=4" alt="avatar" />
+        <img className='rounded-full border-2 border-zinc-400 w-[80px] m-auto' src={profilePic} alt="avatar" />
 
         <nav className='md:m-auto'>
           <ul className='flex justify-between content-center mt-5 md:w-[450px]'>

@@ -13,31 +13,32 @@ function Post() {
     client.fetch(query)
       .then((data) => {
         setContent(data)
-        console.log(data);
       })
   }, [])
 
 
   return (
-    <article>
-      <div>
+    <article className='max-w-[80%] m-auto md:max-w-[650px]'>
+      <div><hr className=' border-zinc-600 mt-5 w-full m-auto' /></div>
+      <div className='py-5'>
         {
           content.map((item, index) => (
             <div key={item.title + index} className='text-zinc-200 font-medium'>
-              <Markdown options={{
+              < Markdown options={{
                 overrides: {
                   Code: {
                     component: Code
                   }
                 }
-              }}>
+              }
+              }>
                 {item.body}
-              </Markdown>
-            </div>
+              </Markdown >
+            </div >
           ))
         }
-      </div>
-    </article>
+      </div >
+    </article >
   )
 }
 
