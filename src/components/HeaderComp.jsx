@@ -35,7 +35,6 @@ function HeaderComp() {
                   className='rounded-lg border border-zinc-600 bg-neutral-900 p-4 hover:bg-neutral-800 transition-all px-3 py-[2px]'
                   key={link.label}
                 >
-                  {/* <a className='text-base font-semibold text-zinc-400' href={link.url}>{link.label}</a> */}
                   <Link to={link.url} className='text-base font-semibold text-zinc-400'>
                     {link.label}
                   </Link>
