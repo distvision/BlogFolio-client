@@ -12,10 +12,6 @@ const links = [
     url: '/blog',
   },
   {
-    label: 'GitHub',
-    url: '/github',
-  },
-  {
     label: 'Contacts',
     url: '/contacts',
   },
@@ -24,18 +20,18 @@ const links = [
 function HeaderComp() {
   return (
     <header className='max-w-[80%] m-auto md:max-w-[650px]'>
-      <div className='pb-5 pt-4 flex flex-col'>
-        <img className='rounded-full border-2 border-zinc-400 w-[80px] m-auto' src={profilePic} alt="avatar" />
+      <div className='pb-5 pt-4 flex justify-between items-center'>
+        <img className='rounded-full border-2 border-zinc-400 w-[80px] mr-5' src={profilePic} alt="avatar" />
 
-        <nav className='md:m-auto'>
-          <ul className='flex justify-between content-center mt-5 md:w-[450px]'>
+        <nav className=''>
+          <ul className='flex justify-end gap-8 items-center'>
             {
               links.map((link) => (
                 <li
-                  className='rounded-lg border border-zinc-600 bg-neutral-900 p-4 hover:bg-neutral-800 transition-all px-3 py-[2px]'
+                  className=''
                   key={link.label}
                 >
-                  <Link to={link.url} className='text-base font-semibold text-zinc-400'>
+                  <Link to={link.url} className='border-y border-zinc-800 bg-neutral-900 hover:bg-neutral-800 transition-all px-5 py-2 text-base font-semibold text-zinc-400'>
                     {link.label}
                   </Link>
                 </li>

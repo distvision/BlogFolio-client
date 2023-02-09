@@ -10,8 +10,8 @@ const About = () => {
       <div><hr className=' border-zinc-600 w-full m-auto' /></div>
       <div className='py-5'>
         <h1 className='text-2xl font-bold mb-5 text-zinc-300'>Things that I have been doing</h1>
-        <div className='rounded-lg border border-zinc-600 bg-neutral-900
-        p-4 hover:bg-[#111111] transition-all'>
+        <div className='border-y border-zinc-800 bg-neutral-900
+            hover:bg-neutral-800 transition-all p-4'>
           <a href="#">
             <h1 className='text-2xl font-bold mb-2 text-zinc-400'>BlogFolio</h1>
             <p className='text-base font-medium text-zinc-400'>My personal blog and portfolio</p>

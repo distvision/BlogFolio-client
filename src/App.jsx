@@ -1,8 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from "./pages/Home"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Blog from "./pages/Blog"
-import Github from "./pages/Github"
-// import Post from "./pages/Post"
+import Home from "./pages/Home"
+import Contacts from "./pages/Contacts"
 import SinglePost from "./pages/SinglePost"
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/blog' element={<Blog />} />
         <Route path="/blog/:slug" element={<SinglePost />} />
-        <Route path='/github' element={<Github />} />
+        <Route path='/contacts' element={<Contacts />} />
       </Routes>
     </BrowserRouter>
   )

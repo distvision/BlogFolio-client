@@ -25,7 +25,8 @@ function Posts({ onLoadingStateChange }) {
       <div className='flex flex-col-reverse'>
         {posts.map((post) => (
           <Link key={post.slug.current} to={"/blog/" + post.slug.current}>
-            <div className='rounded-lg border border-zinc-600 bg-neutral-900 p-4 hover:bg-neutral-800 transition-all mb-5'>
+            <div className='border-y border-zinc-800 bg-neutral-900
+            hover:bg-neutral-800 transition-all p-4 mb-5'>
               <h1 className='text-2xl font-bold mb-2 text-zinc-400'>
                 {post.title}
               </h1>
