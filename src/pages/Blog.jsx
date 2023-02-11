@@ -18,7 +18,6 @@ function Blog() {
       }
       <section className={`${isLoading ? "hidden" : "block"}`}>
         <div>
-          <HeaderComp />
           <BlogPosts onLoadingStateChange={handleLoadingStateChange} />
         </div>
       </section>

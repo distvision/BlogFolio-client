@@ -5,8 +5,8 @@ function BlogPosts({ onLoadingStateChange }) {
 
   return (
     <>
-      <article className='max-w-[80%] m-auto md:max-w-[650px]'>
-        <div className='my-5'>
+      <article className='max-w-[80%] mx-auto min-h-[71vh] md:max-w-[650px]'>
+        <div className='pt-5'>
           <h1 className='text-2xl font-bold mb-5 text-zinc-300'>
             Posts
           </h1>

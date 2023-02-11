@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section className='max-w-[80%] m-auto md:max-w-[650px]'>
+    <section className='max-w-[80%] mx-auto min-h-[71vh] md:max-w-[650px] flex justify-center'>
       <div className='py-5'>
         <h1 className='text-2xl font-bold mb-2 text-zinc-300'>Olá, I'm distvision</h1>
         <p className='text-lg font-medium text-zinc-400'>I am a 23-year-old person who like to spend time in front of a computer pretending to code. Passionate about building things

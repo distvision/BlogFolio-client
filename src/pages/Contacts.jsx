@@ -20,8 +20,7 @@ const ContactLinks = [
 function Contacts() {
   return (
     <>
-      <HeaderComp />
-      <section className='max-w-[80%] m-auto md:max-w-[650px]'>
+      <section className='max-w-[80%] mx-auto min-h-[68vh] md:max-w-[650px]'>
         <div className='my-5'>
           <h1 className='text-2xl font-bold text-zinc-300'>Contacts</h1>
         </div>

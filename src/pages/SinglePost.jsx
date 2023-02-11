@@ -34,7 +34,7 @@ function SinglePost() {
       {
         isLoading && <Loading />
       }
-      <article className='max-w-[80%] m-auto md:max-w-[650px]'>
+      <article className='max-w-[80%] mx-auto min-h-[65vh] md:max-w-[650px] mb-5'>
         <div className={`${isLoading ? "hidden" : "block"}`}>
           <div>
             <div className='my-5'>
@@ -58,9 +58,6 @@ function SinglePost() {
                 }>{content.body || ""}</Markdown>
               </div >
             </div >
-          </div>
-          <div className=' mb-5'>
-            <Link className='rounded-lg border border-zinc-600 bg-neutral-900 hover:bg-neutral-800 transition-all px-3 py-2 text-base font-semibold text-zinc-400' to='/blog'>Back to blog</Link>
           </div>
         </div>
       </article >

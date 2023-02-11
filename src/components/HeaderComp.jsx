@@ -22,7 +22,6 @@ function HeaderComp() {
     <header className='max-w-[80%] m-auto md:max-w-[650px]'>
       <div className='pb-5 pt-4 flex justify-between items-center'>
         <img className='rounded-full border-2 border-zinc-400 w-[80px] mr-5' src={profilePic} alt="avatar" />
-
         <nav className=''>
           <ul className='flex justify-end gap-8 items-center'>
             {
