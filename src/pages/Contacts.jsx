@@ -29,7 +29,7 @@ function Contacts() {
             ContactLinks.map((item, index) => (
               <div key={index}>
                 <div>
-                  <a href={item.url}
+                  <a href={item.url} target='_blank'
                     className='text-lg w-full font-medium text-zinc-400
                     border-y border-zinc-800 bg-neutral-900
                     hover:bg-neutral-800 transition-all p-4 mb-5

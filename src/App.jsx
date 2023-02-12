@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Blog from "./pages/Blog"
 import Contacts from "./pages/Contacts"
+import Error from "./pages/Error"
 import Home from "./pages/Home"
 import NavAndFooter from "./pages/NavAndFooter"
 import SinglePost from "./pages/SinglePost"
@@ -15,6 +16,7 @@ function App() {
           <Route path="/blog/:slug" element={<SinglePost />} />
           <Route path='/contacts' element={<Contacts />} />
         </Route>
+        <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>
   )
